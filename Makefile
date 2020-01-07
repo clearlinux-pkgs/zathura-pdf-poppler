@@ -1,5 +1,5 @@
 PKG_NAME := zathura-pdf-poppler
-URL = https://github.com/pwmt/zathura-pdf-poppler/archive/0.2.9/zathura-pdf-poppler-0.2.9.tar.gz
+URL = https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.0/zathura-pdf-poppler-0.3.0.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
