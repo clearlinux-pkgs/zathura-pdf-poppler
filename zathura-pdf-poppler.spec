@@ -4,13 +4,14 @@
 #
 Name     : zathura-pdf-poppler
 Version  : 0.3.0
-Release  : 5
+Release  : 6
 URL      : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.0/zathura-pdf-poppler-0.3.0.tar.gz
 Source0  : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.0/zathura-pdf-poppler-0.3.0.tar.gz
 Summary  : No detailed summary available
 Group    : Development/Tools
 License  : Zlib
 Requires: zathura-pdf-poppler-data = %{version}-%{release}
+Requires: zathura-pdf-poppler-filemap = %{version}-%{release}
 Requires: zathura-pdf-poppler-lib = %{version}-%{release}
 Requires: zathura-pdf-poppler-license = %{version}-%{release}
 BuildRequires : buildreq-meson
@@ -31,11 +32,20 @@ Group: Data
 data components for the zathura-pdf-poppler package.
 
 
+%package filemap
+Summary: filemap components for the zathura-pdf-poppler package.
+Group: Default
+
+%description filemap
+filemap components for the zathura-pdf-poppler package.
+
+
 %package lib
 Summary: lib components for the zathura-pdf-poppler package.
 Group: Libraries
 Requires: zathura-pdf-poppler-data = %{version}-%{release}
 Requires: zathura-pdf-poppler-license = %{version}-%{release}
+Requires: zathura-pdf-poppler-filemap = %{version}-%{release}
 
 %description lib
 lib components for the zathura-pdf-poppler package.
@@ -61,7 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1656521566
+export SOURCE_DATE_EPOCH=1656699292
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -90,9 +100,14 @@ DESTDIR=%{buildroot} ninja -C builddir install
 /usr/share/applications/org.pwmt.zathura-pdf-poppler.desktop
 /usr/share/metainfo/org.pwmt.zathura-pdf-poppler.metainfo.xml
 
+%files filemap
+%defattr(-,root,root,-)
+/usr/share/clear/filemap/filemap-zathura-pdf-poppler
+
 %files lib
 %defattr(-,root,root,-)
 /usr/lib64/zathura/libpdf-poppler.so
+/usr/share/clear/optimized-elf/other*
 
 %files license
 %defattr(0644,root,root,0755)
