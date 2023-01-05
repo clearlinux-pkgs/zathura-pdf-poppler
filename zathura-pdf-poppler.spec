@@ -4,7 +4,7 @@
 #
 Name     : zathura-pdf-poppler
 Version  : 0.3.1
-Release  : 11
+Release  : 12
 URL      : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.1/zathura-pdf-poppler-0.3.1.tar.gz
 Source0  : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.1/zathura-pdf-poppler-0.3.1.tar.gz
 Summary  : No detailed summary available
