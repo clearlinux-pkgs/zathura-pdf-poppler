@@ -5,7 +5,7 @@
 #
 Name     : zathura-pdf-poppler
 Version  : 0.3.1
-Release  : 13
+Release  : 14
 URL      : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.1/zathura-pdf-poppler-0.3.1.tar.gz
 Source0  : https://github.com/pwmt/zathura-pdf-poppler/archive/0.3.1/zathura-pdf-poppler-0.3.1.tar.gz
 Summary  : No detailed summary available
@@ -66,7 +66,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1683246278
+export SOURCE_DATE_EPOCH=1685476878
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
